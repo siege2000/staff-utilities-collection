@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bootstrap Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Cashdown Assistance</h1>
+      <form class="border">
+        <div class="row m-1">
+          
+          <div class="col-md-2 ">
+            <label for="cashdown-reference-no">Cashdown Ref</label>
+            </div>
+            <div class="col-md-3 ">
+            <input type="number" name="cashdown-reference-no" />
+          </div>
+          
+        <div class="col-md-2">
+            <label for="cashdown-date">Date</label>
+            </div>
+            <div class="col-md-2">
+            <input type="date" name="date" />
+        </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-md-2">
+                <label for="cashdown-amount">Amount</label>
+                </div>
+                <div class="col-md-3">
+                <input type="number" name="cashdown-amount" />
+            </div>
+            </div>
+            
+        <div class="row m-1 border">
+            <div class="col-md-12">
+                <h2>Instructions</h2>
+                <ul>
+                    <li>Count out the initial float, start from smallest denomination to largest</li>
+                    <li>The balance should be the cash takings for the day</li>
+                    <li>Enter the amount for each denomination below</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+           
+            
+            <div class="col-md-6" ><h3>Coins</h3>
+               <div class="row">
+                <div class="col-md-2"><p>10c</p></div>
+                <div class="col-md-6"><input type="number" name="ten-cents" /></div>
+               </div> 
+               <div class="row">
+                <div class="col-md-2"><p>20c</p></div>
+                <div class="col-md-6"><input type="number" name="twenty-cents" /></div>
+               </div> 
+               <div class="row">
+                <div class="col-md-2"><p>50c</p></div>
+                <div class="col-md-6"><input type="number" name="fifty-cents" /></div>
+               </div> 
+               <div class="row">
+                <div class="col-md-2"><p>$1</p></div>
+                <div class="col-md-6"><input type="number" name="one-dollar" /></div>
+               </div> 
+               <div class="row">
+                <div class="col-md-2"><p>$2</p></div>
+                <div class="col-md-6"><input type="number" name="two-dollar" /></div>
+               </div> 
+
+            </div>
+            <div class="col-md-3" ><h3>Coins</h3>
+                <div class="row">
+                 <div class="col-md-6"><p>$1</p></div>
+                 <div class="col-md-6"><input type="number" name="ten-cents" /></div>
+                </div> 
+                <div class="row">
+                 <div class="col-md-6"><p>$2</p></div>
+                 <div class="col-md-6"><input type="number" name="twenty-cents" /></div>
+                </div> 
+                <div class="row">
+                 <div class="col-md-6"><p>$5</p></div>
+                 <div class="col-md-6"><input type="number" name="fifty-cents" /></div>
+                </div> 
+                <div class="row">
+                 <div class="col-md-6"><p>$10</p></div>
+                 <div class="col-md-6"><input type="number" name="one-dollar" /></div>
+                </div> 
+                <div class="row">
+                 <div class="col-md-6"><p>$20</p></div>
+                 <div class="col-md-6"><input type="number" name="two-dollar" /></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-6"><p>$50</p></div>
+                    <div class="col-md-6"><input type="number" name="two-dollar" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><p>$100</p></div>
+                    <div class="col-md-6"><input type="number" name="two-dollar" /></div>
+                </div>
+ 
+             </div>
+        </div>
+
+      </form>
+      <div class="row">
+      <div class="col-md-12"><p>Total Cash <b id="total-cash"></b></p></div>
+    </div>
+</div>
+            
+    <script>
+        const cashdownAmount = document.querySelector('input[name="cashdown-amount"]');
+        const totalCash = document.querySelector('#total-cash');
+        cashdownAmount.addEventListener('change', (event) => {
+            totalCash.innerHTML = event.target.value;
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+</div>
+  </body>
+</html>
